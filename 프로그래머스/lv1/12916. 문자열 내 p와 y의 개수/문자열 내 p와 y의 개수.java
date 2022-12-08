@@ -1,31 +1,22 @@
 class Solution {
     boolean solution(String s) {
         boolean answer = true;
+        s = s.toUpperCase();
+        
         int p_count = 0, y_count = 0;
         
-        String[] str = s.split("");
-        for(int i = 0; i < str.length; i++) {
-            switch(str[i]) {
-                case "p":
-                    p_count += 1;
-                    break;
-                case "P":
-                    p_count += 1;
-                    break;
-                case "y":
-                    y_count += 1;
-                    break;
-                case "Y":
-                    y_count += 1;
-                    break;
-                       
+        for(int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) == 'P') {
+                p_count++;
+            } else if(s.charAt(i) == 'Y') {
+                y_count++;
             }
         }
+        
         if(p_count == y_count) {
-            answer = true;
+            return answer = true;
         } else {
-            answer = false;
+            return answer = false;
         }
-        return answer;
     }
 }
