@@ -1,6 +1,5 @@
 class Solution {
     boolean solution(String s) {
-        boolean answer = true;
         s = s.toUpperCase();
         
         int p_count = 0, y_count = 0;
@@ -14,9 +13,9 @@ class Solution {
         }
         
         if(p_count == y_count) {
-            return answer = true;
+            return true;
         } else {
-            return answer = false;
+            return false;
         }
     }
 }
